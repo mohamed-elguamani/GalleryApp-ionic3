@@ -1,4 +1,5 @@
-Setup
+
+<h2>Setup</h2>
 
 Requirements to use this project:
 

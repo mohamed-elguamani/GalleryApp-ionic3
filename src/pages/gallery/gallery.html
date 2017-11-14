@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>gallery</ion-title>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
+
+  <ion-card *ngFor="let post of posts?.hits">
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img [src]="post?.userImageURL">
+    </ion-avatar>
+    <h2>{{post?.user}}</h2>
+  </ion-item>
+
+  <img [src]="post?.previewURL" (click)="onDetailsPost(post)">
+
+  <ion-card-content>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{post?.likes}} Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>{{post?.comments}} Comments</div>
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>

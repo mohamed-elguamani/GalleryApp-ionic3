@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color='danger'>
+  <ion-navbar color='galapp'>
     <ion-title>
       Home
     </ion-title>
@@ -16,7 +16,7 @@
     <ion-slide *ngFor="let slide of slides">
       <ion-toolbar>
         <ion-buttons end>
-          <button ion-button color="danger" (click)="nextPage()">Skip</button>
+          <button ion-button color="galapp" (click)="nextPage()">Skip</button>
         </ion-buttons>
       </ion-toolbar>
       <img [src]="slide.image" class="slide-image"/>

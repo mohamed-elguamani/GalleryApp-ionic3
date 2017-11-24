@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule }    from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     galleryService,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
